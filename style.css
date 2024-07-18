@@ -402,7 +402,7 @@ body {
         margin-top: 30px;
     }
     .title h1{
-        font-size: 30px;
+        font-size: 25px;
     }
     .title p{
        font-size: 11px;
@@ -412,10 +412,10 @@ body {
         margin-top: auto;
     }
     .work-arrow p {
-        font-size: 12px;
+        font-size: 10px;
     }
     .work-arrow i {
-        font-size: 18px;
+        font-size: 15px;
     }
     .img-banner{
         max-width: 300px;
@@ -550,8 +550,11 @@ body {
     width: 650px;
     height: 250px;
 }
-
+.card-text{
+    height: 100%;
+}
 .card-title {
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -580,6 +583,10 @@ body {
     font-family: 'Poppins';
     font-size: 18px;
     color: #2b4743;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .service-span {

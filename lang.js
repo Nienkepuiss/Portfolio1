@@ -1,6 +1,6 @@
 const translations = {
     fr: {
-        title: "Salut, je suis Nienke, développeur web",
+        title: "Salut, je suis <span class=\"highlight\">Nienke</span>, développeur web",
         description: "Dévouée à transformer les idées en réalités numériques.",
         about: "À propos",
         projects: "Projets",
@@ -23,7 +23,7 @@ function changeLanguage(lang) {
         window.location.reload();
     } else {
         const data = translations[lang];
-        document.querySelector('.title h1').textContent = data.title;
+        document.querySelector('.title h1').innerHTML = data.title;
         document.querySelector('.title p').textContent = data.description;
 
         const navLinks = document.querySelectorAll('.nav-item a');
