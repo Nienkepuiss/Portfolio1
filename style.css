@@ -999,6 +999,7 @@ body {
     #close-modale{
         width: 20px;
         height: 20px;
+        padding: 0;
     }
     #close-modale i{
         font-size: 10px;
