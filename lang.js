@@ -37,7 +37,9 @@ const translations = {
             description: "Projet réalisé dans le cadre de la formation Développeur Web chez <a href=\"https://openclassrooms.com/en/paths/932-web-developer\" target=\"_blank\">OpenClassrooms</a>",
             p1: "▶︎ Mise en place du front-end d'une application de location de logement 🏘️",
             p2: "▶︎ Configuration des composants avec React et des routes de l'application avec React Router ⚛️"
-        }
+        },
+        formTitle: "Contactez-moi",
+        formText: "Discutons de votre projet ! N'hésitez pas à me contacter via le formulaire ou par <a class=\"link\" href=\"mailto:npuissesseau@gmail.com\">email</a> !",
     }
 };
 
@@ -99,5 +101,8 @@ function changeLanguage(lang) {
         document.querySelector('#modale3 .text-modale h4').innerHTML = data.modale3.description;
         document.querySelectorAll('#modale3 .text-modale p')[0].innerHTML = data.modale3.p1;
         document.querySelectorAll('#modale3 .text-modale p')[1].innerHTML = data.modale3.p2;
+
+        document.querySelector('.form-title').textContent = data.formTitle;
+        document.querySelector('.contact-text-form').innerHTML = data.formText;
     }
 }
