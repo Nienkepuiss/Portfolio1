@@ -42,6 +42,14 @@ body {
     color: #8c3839;
     font-weight: 600;
 }
+.nav-item button{
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+.nav-item button:hover{
+    animation: vibration 0.5s;
+}
 #menu-toggle {
     display: none; 
 }
@@ -50,7 +58,6 @@ body {
     #header-container {
       padding: 0 1em; 
     }
-  
     .nav {
       display: none; 
       position: absolute;
@@ -61,11 +68,9 @@ body {
       box-shadow: rgba(120, 120, 129, 0.1) 0px 3px 3px 3px;
       padding-top: 30px;
       flex-direction: column;
-      align-items: center;
       gap: 30px;
       height: 100vh;
     }
-  
     .nav.active {
       display: flex; 
     }
@@ -73,7 +78,9 @@ body {
       margin: 10px 0;
       font-size: 25px;
     }
-  
+    .nav-item button{
+        font-size: 30px;
+    }
     #menu-toggle {
       display: block;
       padding: 0 8px 4px 8px;
@@ -203,7 +210,7 @@ body {
 }
 .title h1 {
     font-family: 'Poppins';
-    font-size: 70px;
+    font-size: 60px;
     margin: 0 0 10px 0;
 }
 .title p {
@@ -360,7 +367,7 @@ body {
     .title h1 {
         font-size: 55px; 
         margin-bottom: 10px;
-        font-size: 50px; 
+        font-size: 45px; 
     }
     .title p {
         font-size: 14px;
@@ -490,7 +497,7 @@ body {
     font-weight: 400;
     font-size: 20px;
     font-family: 'Poppins';
-    margin: 5px 0 20px 0;
+    margin: 0 0 20px 0;
     color: #cedeeb;
 }
 
@@ -626,7 +633,7 @@ body {
         width: 480px;
     }
     .service-card-content{
-        height: 180px;
+        height: 200px;
         width: 480px;
     }
     .about-content h2{
@@ -661,7 +668,7 @@ body {
         height: 55px;
     }
     .service-card-content{
-        height: 170px;
+        height: 180px;
         width: 490px;
     }
     .card-subtitle{
@@ -696,7 +703,7 @@ body {
     }
     .service-card-content{
         width: 300px;
-        height: 190px;
+        height: 220px;
     }
     .card-title h3{
         font-size: 15px;
@@ -721,7 +728,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: relative; 
 }
 #projects h2 {
     font-family: 'Anton';
@@ -730,6 +737,11 @@ body {
     padding: 40px;
     position: absolute;
     top: 10%;
+}
+.projects-container{
+    opacity: 0;
+    transform: translateY(-50px); 
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
 .carousel{
     display: flex;

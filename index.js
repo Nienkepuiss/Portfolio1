@@ -28,17 +28,29 @@ window.addEventListener('orientationchange', () => {
 document.addEventListener('DOMContentLoaded', function () {
   const menuItems = document.querySelectorAll('.nav-link');
   const menuToggle = document.getElementById('menu-toggle');
+  const languageButtons = document.querySelectorAll('.nav-item button');
 
   menuItems.forEach(item => {
-    item.addEventListener('click', function () {
-      // Ferme le menu en cliquant sur le toggle
-      menuToggle.click();
-
-      // Gère les classes 'active' pour la navigation
-      menuItems.forEach(el => el.classList.remove('active'));
-      this.classList.add('active');
-    });
+    item.addEventListener('click', toggleMenuAndSetActive);
   });
+
+  languageButtons.forEach(button => {
+    button.addEventListener('click', toggleMenu);
+  });
+
+  // Toggle le menu et ajuste les classes 'active'
+  function toggleMenuAndSetActive() {
+    menuToggle.click(); // Ferme le menu en cliquant sur le toggle
+
+    // Gère les classes 'active' pour la navigation
+    menuItems.forEach(el => el.classList.remove('active'));
+    this.classList.add('active');
+  }
+
+  // Toggle le menu sans ajuster les classes 'active'
+  function toggleMenu() {
+    menuToggle.click(); // Ferme le menu en cliquant sur le toggle
+  }
 
   // Détecte la section visible pour ajouter la classe 'active' au lien correspondant
   window.addEventListener('scroll', () => {
@@ -60,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
 
 // OPEN MENU
 document.getElementById('menu-toggle').addEventListener('click', function() {
@@ -95,7 +108,33 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(skillsSection);
 });
 
+// PROJECTS EFFECT 
+// Fonction pour vérifier si un élément est visible dans la vue de défilement
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
+function animateProjectsOnScroll() {
+  var projectsSection = document.getElementById('projects');
+  var projectCards = projectsSection.querySelectorAll('.projects-container');
+
+  projectCards.forEach(function(card) {
+      if (isElementInViewport(card)) {
+          card.style.opacity = 1;
+          card.style.transform = 'translateY(0)'; // Utilisation de translateY pour le déplacement
+      }
+  });
+}
+
+// Écouteur d'événement pour détecter le défilement
+window.addEventListener('scroll', animateProjectsOnScroll);
+animateProjectsOnScroll();
 
 
 // MOBILE DISPLAY PROJECTS

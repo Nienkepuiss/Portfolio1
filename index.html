@@ -19,7 +19,7 @@
            <a class="logo-nini" href="#banner">NINI</a>
         </div>
         <button id="menu-toggle">☰</button>
-        <ul class="nav">
+        <ul class="nav align-items-center">
           <li class="nav-item">
             <a class="nav-link" href="#about-services">About</a>
           </li>
@@ -28,6 +28,10 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <button onclick="changeLanguage('fr')">🇫🇷</button>
+            <button onclick="changeLanguage('en')">🇬🇧</button>
           </li>
         </ul>
       </div>
@@ -97,9 +101,11 @@
                         <h3>Web Development</h3>
                         <i class="fa-regular fa-face-smile"></i>
                       </div>
-                      <p class="card-subtitle"><span class="service-span">Custom Website Creation</span><br/>
+                      <div class="card-subtitle">
+                      <p><span class="service-span">Custom Website Creation</span><br/>
                         Enhance your online presence with a unique and functional website. Whether you need a showcase site, a blog, or an online store, I design sites tailored to your needs and optimized for all devices.</p>
                     </div>
+                  </div>
                   </div>
                   <div class="service-card-content">
                     <div class="card-text">
@@ -107,8 +113,10 @@
                         <h3>Website Optimization</h3>
                         <i class="fa-regular fa-face-smile"></i>
                       </div>
-                      <p class="card-subtitle"><span class="service-span">Boost Your Website's Performance</span><br/>
+                      <div class="card-subtitle">
+                      <p><span class="service-span">Boost Your Website's Performance</span><br/>
                         Improve the speed, user experience, and SEO of your existing site. I analyze and optimize every aspect of your website to ensure better visibility and smooth navigation.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -247,6 +255,7 @@
 </footer>
 
 <script src="index.js"></script>
+<script src="lang.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
