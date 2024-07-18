@@ -104,6 +104,9 @@ body {
         margin: 5px;
         font-size: 20px;
     }
+    .nav-item button{
+        padding: 0;
+    }
 }
 
 /* BANNER */
@@ -997,12 +1000,12 @@ body {
         font-size: 12px;
     }
     #close-modale{
-        width: 10px;
+        width: 20px;
         height: 20px;
         padding: 0;
     }
     #close-modale i{
-        font-size: 10px;
+        font-size: 15px;
     }
 }
 
