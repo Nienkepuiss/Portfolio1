@@ -20,28 +20,30 @@ const translations = {
         BluelTitle: "Site dynamique d'une architecte",
         KasaTitle: "Application web de location",
         gitBouton: "Voir code",
+        gitBoutonModale: "Voir code",
         modale1: {
             title: "Booki : Agence de voyage",
             description: "Projet réalisé dans le cadre de la formation Développeur Web chez <a href=\"https://openclassrooms.com/en/paths/932-web-developer\" target=\"_blank\">OpenClassrooms</a>",
-            p1: "▶︎ Création de la page d'accueil d'une agence de voyage en utilisant HTML et CSS ✈️",
-            p2: "▶︎ Intégration d'une interface responsive pour le site web 💻"
+            p1: "▶︎ Création de la page d'accueil d'une agence de voyage en utilisant <span class=\"bold\">HTML</span> et <span class=\"bold\">CSS</span> ✈️",
+            p2: "▶︎ Intégration d'une interface <span class=\"bold\">responsive</span> pour le site web 💻"
         },
         modale2: {
             title: "Sophie Bluel : Architecte",
             description: "Projet réalisé dans le cadre de la formation Développeur Web chez <a href=\"https://openclassrooms.com/en/paths/932-web-developer\" target=\"_blank\">OpenClassrooms</a>",
-            p1: "▶︎ Création d'une page web dynamique pour une designer d'intérieur en utilisant JavaScript et une API 🎨",
-            p2: "▶︎ Développement de la page de présentation des travaux de la designer, gestion des événements utilisateurs et manipulation des éléments du DOM avec JavaScript 🗂️"
+            p1: "▶︎ Création d'une page web <span class=\"bold\">dynamique</span> pour une designer d'intérieur en utilisant <span class=\"bold\">JavaScript</span> et une <span class=\"bold\">API</span> 🎨",
+            p2: "▶︎ Développement de la page de présentation des travaux de la designer, gestion des événements utilisateurs et manipulation des <span class=\"bold\">éléments du DOM</span> avec <span class=\"bold\">JavaScript</span> 🗂️"
         },
         modale3: {
             title: "Kasa : Location de logement",
             description: "Projet réalisé dans le cadre de la formation Développeur Web chez <a href=\"https://openclassrooms.com/en/paths/932-web-developer\" target=\"_blank\">OpenClassrooms</a>",
-            p1: "▶︎ Mise en place du front-end d'une application de location de logement 🏘️",
-            p2: "▶︎ Configuration des composants avec React et des routes de l'application avec React Router ⚛️"
+            p1: "▶︎ Mise en place du <span class=\"bold\">front-end</span> d'une application de location de logement 🏘️",
+            p2: "▶︎ Configuration des composants avec <span class=\"bold\">React</span> et des routes de l'application avec <span class=\"bold\">React Router</span> ⚛️"
         },
         formTitle: "Contactez-moi",
         formText: "Discutons de votre projet ! N'hésitez pas à me contacter via le formulaire ou par <a class=\"link\" href=\"mailto:npuissesseau@gmail.com\">email</a> !",
     }
 };
+
 
 function changeLanguage(lang) {
     if (lang === 'en') {
@@ -87,16 +89,20 @@ function changeLanguage(lang) {
         projectButtons.forEach((button, index) => {
             button.innerHTML = `${data.gitBouton} <i class="fa-brands fa-github ml-2"></i>`;
         });
+
+        // Modal 1
         document.querySelector('#modale1 .header-modale h3').innerHTML = data.modale1.title;
         document.querySelector('#modale1 .text-modale h4').innerHTML = data.modale1.description;
         document.querySelectorAll('#modale1 .text-modale p')[0].innerHTML = data.modale1.p1;
         document.querySelectorAll('#modale1 .text-modale p')[1].innerHTML = data.modale1.p2;
 
+        // Modal 2
         document.querySelector('#modale2 .header-modale h3').innerHTML = data.modale2.title;
         document.querySelector('#modale2 .text-modale h4').innerHTML = data.modale2.description;
         document.querySelectorAll('#modale2 .text-modale p')[0].innerHTML = data.modale2.p1;
         document.querySelectorAll('#modale2 .text-modale p')[1].innerHTML = data.modale2.p2;
 
+        // Modal 3
         document.querySelector('#modale3 .header-modale h3').innerHTML = data.modale3.title;
         document.querySelector('#modale3 .text-modale h4').innerHTML = data.modale3.description;
         document.querySelectorAll('#modale3 .text-modale p')[0].innerHTML = data.modale3.p1;
@@ -104,5 +110,10 @@ function changeLanguage(lang) {
 
         document.querySelector('.form-title').textContent = data.formTitle;
         document.querySelector('.contact-text-form').innerHTML = data.formText;
+
+        const modaleButtons = document.querySelectorAll('.btn-primary-modale');
+        modaleButtons.forEach((buttonModale, index) => {
+            buttonModale.innerHTML = `${data.gitBoutonModale} <i class="fa-brands fa-github ml-2"></i>`;
+        });
     }
 }

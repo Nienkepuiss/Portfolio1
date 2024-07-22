@@ -909,6 +909,9 @@ body {
 	background: rgba(0, 0, 0, 0.5);
     z-index: 1040;
 }
+.bold{
+    font-weight: 700;
+}
 .modale-content{
 	overflow: auto;
 	width: 630px;
@@ -924,7 +927,6 @@ body {
 }
 .modale-content h3{
     position: absolute;
-    top: 8%;
     left: 5%;
     font-family: 'Anton';
     font-size: 20px;
@@ -969,6 +971,23 @@ body {
     text-decoration: none;
     color: #da7073;
 }
+.btn-primary-modale{
+    align-self: flex-end;
+    background-color: #2b4743;
+    color: #fff;
+    border: none;
+    font-family: 'Poppins';
+    font-size: 12px;
+}
+.btn-primary-modale:hover{
+    background-color: #8c3839;
+    color: #fff;
+    animation: vibration 0.3s;
+}
+.btn-primary-modale i{
+    font-size: 15px;
+    margin-left: 5px;
+}
 
 @media (max-width: 768px){
     .modale-content{
@@ -1006,6 +1025,12 @@ body {
     }
     #close-modale i{
         font-size: 15px;
+    }
+    .btn-primary-modale{
+        font-size: 10px;
+    }
+    .btn-primary-modale i{
+        font-size: 13px;
     }
 }
 
